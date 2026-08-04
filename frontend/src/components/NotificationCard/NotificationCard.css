@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+/* ===========================
+   CARD
+=========================== */
+
+.notification-card {
+  width: calc(100% - 32px);
+
+  margin: 8px auto 0;
+
+  padding: 8px;
+
+  background: #F5F9FF;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  transition: .25s ease;
+
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.notification-card.unread {
+  background: #EAF4FF;
+}
+
+.notification-card.read {
+  background: #F8FAFC;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.notification-icon {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 6px;
+
+  background: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.notification-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.notification-title {
+  margin: 0;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+
+  color: #202020;
+}
+
+.notification-time {
+  flex-shrink: 0;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 7px;
+  font-weight: 500;
+
+  color: #9CA3AF;
+}
+
+.notification-message {
+  margin-top: 3px;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 12px;
+
+  color: #6B7280;
+}

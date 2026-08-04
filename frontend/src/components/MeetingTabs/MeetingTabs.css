@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+.meeting-tabs-container {
+  width: 380px;
+  height: 80px;
+
+  margin: -28px auto 24px;
+
+  top: 40px;
+
+  background: #ffffff;
+
+  border-radius: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+
+  position: relative;
+  z-index: 5;
+}
+
+.tab {
+  width: 117px;
+  height: 38px;
+
+  border: 1.5px solid #1789FC;
+  border-radius: 22px;
+
+  background: transparent;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #1789FC;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.tab.active {
+  background: #1789FC;
+  color: white;
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+}

@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+/* ==========================
+   TITLE
+========================== */
+
+.verify-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 16px;
+}
+
+.verify-title {
+  margin: 0;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.verify-lock {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.otp-instruction {
+  margin: 0 0 32px;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+
+  color: #202020;
+}
+
+/* ==========================
+   OTP INPUTS
+========================== */
+
+.otp-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.otp-input {
+  width: 42px;
+  height: 48px;
+
+  border: none;
+  border-bottom: 2px solid #1789FC;
+
+  background: transparent;
+
+  outline: none;
+
+  text-align: center;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #202020;
+
+  flex-shrink: 0;
+
+  transition: border-color .2s ease;
+}
+
+.otp-input:focus {
+  border-bottom-color: #0E73DB;
+}
+
+/* ==========================
+   ERROR
+========================== */
+
+.otp-error {
+  margin: 0 0 20px;
+
+  text-align: center;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #E53935;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.verify-title-row + .otp-instruction {
+  margin-top: 8px;
+}

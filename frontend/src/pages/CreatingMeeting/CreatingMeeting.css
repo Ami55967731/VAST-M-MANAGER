@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.create-meeting-page {
+  min-height: 100vh;
+  background: #d3d5d8;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.create-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 90px;
+
+  background: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid #F2F2F2;
+
+  z-index: 1000;
+}
+
+.create-header h2 {
+  margin: 0;
+
+  font-family: "Urbanist";
+  font-size: 20px;
+  font-weight: 600;
+  color: #202020;
+ 
+  transform: translateY(20px);
+}
+
+
+.create-form-container {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 110px 16px 110px;
+
+  box-sizing: border-box;
+}
+
+.create-form {
+  width: 100%;
+  max-width: 430px;
+
+  background: #FFFFFF;
+
+  border-radius: 24px;
+
+  padding: 28px 20px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* FORM */
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 20px 40px;
+  border-radius: 1px;
+  
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #344054;
+}
+
+/* INPUTS */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 16px 18px;
+  font-family: "Urbanist", sans-serif;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.form-group input {
+  height: 58px;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #98a2b3;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2f80ed;
+  box-shadow: 0 0 0 4px rgba(47, 128, 237, 0.12);
+}
+
+/* INPUT WITH ICON */
+
+.input-icon {
+  height: 58px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  transition: 0.2s ease;
+}
+
+.input-icon:focus-within {
+  border-color: #2f80ed;
+  box-shadow: 0 0 0 4px rgba(47, 128, 237, 0.12);
+}
+
+.input-icon img:first-child {
+  width: 20px;
+  margin-right: 12px;
+}
+
+.input-icon input {
+  flex: 1;
+  border: none;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+}
+
+.input-icon input:focus {
+  box-shadow: none;
+}
+
+.input-icon img:last-child {
+  width: 18px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+
+.create-form .primary-button {
+  margin-top: 20px;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.timezone-dropdown {
+  position: absolute;
+  top: 78px;
+  left: 0;
+  width: 311px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.timezone-item {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: white;
+  text-align: left;
+  padding: 0 18px;
+  cursor: pointer;
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+}
+
+.timezone-item:hover {
+  background: #F5F9FF;
+}
+
+.create-meeting-page {
+  min-height: 100vh;
+  background: #Fff;
+}
+
+.create-form-wrapper {
+  margin: 18px 16px 0;
+  background: #FFFFFF;
+  border-radius: 24px 24px 0 0;
+  padding-top: 20px;
+}
+

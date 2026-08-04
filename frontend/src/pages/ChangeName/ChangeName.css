@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+.change-name-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  font-family: "Urbanist", sans-serif;
+}
+
+.change-name-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.change-name-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.change-name-back {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.change-name-content {
+  padding: 20px;
+}
+
+.change-name-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.change-name-title h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.change-name-title img {
+  width: 18px;
+  height: 18px;
+}
+
+.save-button {
+  margin-top: 48px;
+}

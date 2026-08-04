@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+/* ===========================
+   PAGE
+=========================== */
+
+.home-page {
+  height: 100vh;
+
+  background: #F5F6F7;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.home-content {
+  flex: 1;
+
+  background: #FFFFFF;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  margin-top: -35px;
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.meeting-tabs-container {
+  flex-shrink: 0;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  background: #FFFFFF;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* ===========================
+   SCROLLABLE LIST
+=========================== */
+
+.meeting-list {
+  flex: 1;
+
+  overflow-y: auto;
+  overflow-x: visible;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  padding: 50px 16px 120px;
+
+  position: relative;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.meeting-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===========================
+   SCROLL EFFECT
+=========================== */
+
+.meeting-list {
+  scroll-behavior: smooth;
+}
+
+.meeting-list > * {
+  animation: fadeUp .25s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: .7;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

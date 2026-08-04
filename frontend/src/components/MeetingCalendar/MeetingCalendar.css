@@ -1,0 +1,239 @@
+.meeting-calendar {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= HEADER ================= */
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.calendar-title span {
+  font-family: "Urbanist", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.calendar-chevron {
+  width: 20px;
+  height: 20px;
+  transition: transform .25s ease;
+}
+
+.calendar-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* ================= MONTH NAVIGATION ================= */
+
+.calendar-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.calendar-actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 24px;
+  color: #202020;
+}
+
+/* ================= WEEK DAYS ================= */
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  text-align: center;
+
+  margin-bottom: 18px;
+
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ================= DAYS ================= */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  font-family: "Urbanist";
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.calendar-day:hover {
+  background: #EEF6FF;
+}
+
+.calendar-day.selected {
+  background: #1789FC;
+  color: white;
+}
+
+/* ================= MONTH / YEAR PICKER ================= */
+
+.month-year-picker {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= YEARS ================= */
+
+.year-list {
+  max-height: 150px;
+
+  overflow-y: auto;
+
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+
+  margin-bottom: 24px;
+}
+
+.year-list button {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-bottom: 1px solid #ECECEC;
+
+  background: white;
+
+  text-align: left;
+
+  padding: 0 16px;
+
+  font-family: "Urbanist";
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.year-list button:last-child {
+  border-bottom: none;
+}
+
+.year-list button:hover {
+  background: #F6FAFF;
+}
+
+.active-year {
+  background: #D8EBFF !important;
+  color: #1789FC;
+  font-weight: 700;
+}
+
+/* Scrollbar */
+
+.year-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.year-list::-webkit-scrollbar-thumb {
+  background: #D2E6FF;
+  border-radius: 20px;
+}
+
+/* ================= MONTHS ================= */
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  justify-items: center;
+
+  row-gap: 20px;
+  column-gap: 12px;
+}
+
+.month-grid button {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  font-family: "Urbanist";
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.month-grid button:hover {
+  background: #EEF6FF;
+}
+
+.active-month {
+  background: #1789FC !important;
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+
+  .meeting-calendar {
+    padding: 18px;
+  }
+
+  .calendar-title span {
+    font-size: 20px;
+  }
+
+  .calendar-day {
+    width: 38px;
+    height: 38px;
+  }
+
+  .month-grid button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .calendar-actions button {
+    font-size: 20px;
+  }
+}

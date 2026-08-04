@@ -1,23 +1,20 @@
-import AppRoutes from "./routes/AppRoutes";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Splash from "./pages/Splash/Splash";
+import Onboarding from "./pages/Onboarding/Onboarding";
+import CreatingMeeting from "./pages/CreatingMeeting/CreatingMeeting";
+import EditMeeting from  "./pages/EditMeeting/EditMeeting";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-300 flex justify-center items-center">
-
-      <div
-        className="
-          `w-97.5`
-          `h-211`
-          bg-white
-          shadow-2xl
-          rounded-[35px]
-          overflow-hidden
-        "
-      >
-        <AppRoutes />
-      </div>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Splash />} />
+        <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/creating-meeting" element={<CreatingMeeting />} />
+        <Route path="/edit-meeting/id" element={<EditMeeting />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

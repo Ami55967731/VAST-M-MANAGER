@@ -1,0 +1,56 @@
+.social-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.social-title {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7A7A7A;
+  margin-bottom: 16px;
+}
+
+.social-icons {
+  width: 139px;
+  height: 33px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-button {
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+.social-button:active {
+  transform: scale(0.95);
+}
+
+.social-button img {
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+}

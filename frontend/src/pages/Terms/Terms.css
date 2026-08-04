@@ -1,0 +1,10 @@
+.terms-page {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #FFFFFF;
+
+  overflow: hidden;
+}

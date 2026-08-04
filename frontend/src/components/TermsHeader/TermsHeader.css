@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+.terms-header{
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 20px;
+
+    border-bottom:1px solid #ECECEC;
+
+    background:#fff;
+}
+
+.terms-back-button{
+    width:40px;
+    height:40px;
+
+    border:none;
+    background:none;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+.terms-back-button img{
+    width:22px;
+    height:22px;
+}
+
+.terms-header h2{
+
+    margin:0;
+
+    font-family:"Urbanist",sans-serif;
+    font-size:18px;
+    font-weight:700;
+
+    color:#202020;
+}
+
+.terms-header-space{
+    width:40px;
+}

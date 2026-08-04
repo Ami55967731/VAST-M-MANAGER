@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.register-page {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Urbanist", sans-serif;
+}
+
+.register-header {
+  width: 100%;
+  display: block;
+}
+
+.register-content {
+   width: 100%;
+  max-width: 375px;
+  margin: -20px auto 0;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.login-link span {
+  color: #1789FC;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register-error {
+  color: #E53935;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}

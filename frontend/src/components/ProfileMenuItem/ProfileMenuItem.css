@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+/* ===========================
+   PROFILE MENU ITEM
+=========================== */
+
+.profile-menu-item {
+  width: 100%;
+  height: 41px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.profile-menu-item:hover {
+  background: #F8FAFF;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.profile-menu-left {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.profile-menu-icon {
+  width: 16px;
+  height: 16px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.profile-menu-title {
+  font-family: "Urbanist", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+
+  color: #202020;
+}
+
+/* ===========================
+   RIGHT ARROW
+=========================== */
+
+.profile-menu-arrow {
+  width: 16px;
+  height: 16px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}

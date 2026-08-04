@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+.meeting-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meeting-input label {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #202020;
+}
+
+.meeting-input-wrapper {
+  width: 100%;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 20px;
+
+  border: 1px solid #D9D9D9;
+  border-radius: 30px;
+
+  background: #FFFFFF;
+
+  transition: border-color .2s ease;
+}
+
+.meeting-input-wrapper:focus-within {
+  border-color: #1789FC;
+}
+
+
+.meeting-input-field {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #202020;
+}
+
+.meeting-input-field::placeholder {
+  color: #9B9B9B;
+  font-weight: 400;
+}
+
+
+
+/* TEXTAREA */
+
+.meeting-textarea-wrapper {
+  width: 100%;
+  min-height: 98px;
+
+  align-items: flex-start;
+
+  padding: 14px 16px;
+
+  border: 0.5px solid #d9d9d9;
+  border-radius: 22px;
+
+  transition: border-color 0.2s ease;
+}
+
+.meeting-textarea-wrapper:focus-within {
+  border-color: #1789fc;
+}
+
+.meeting-textarea {
+  width: 100%;
+  min-height: 70px;
+
+  border: none;
+  outline: none;
+  resize: none;
+
+  background: transparent;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+}
+
+.meeting-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ICONS */
+
+.meeting-left-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.meeting-right-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}

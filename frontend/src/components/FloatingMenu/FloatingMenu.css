@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+.floating-button {
+  position: fixed;
+  right: 24px;
+  bottom: 32px;
+
+  width: 64px;
+  height: 64px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #1E63F3;
+  color: #FFFFFF;
+
+  font-size: 32px;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(30, 99, 243, 0.3);
+}
+
+.floating-button:hover {
+  transform: scale(1.05);
+}
+
+.floating-button:active {
+  transform: scale(0.95);
+}

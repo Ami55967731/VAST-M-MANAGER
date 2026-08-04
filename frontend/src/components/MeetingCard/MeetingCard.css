@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+/* ===========================
+   MEETING CARD
+=========================== */
+
+.meeting-card {
+  width: calc(100% - 4px);
+  max-width: 500px;
+  min-height: 215px;
+
+  margin: 20px auto 0;
+  padding: 16px;
+
+  background: #FFFFFF;
+  border: 1px solid #1789FC;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  transition: 
+  transform .25s ease,
+  margin-top .25s ease;
+}
+ 
+.meeting-card-open {
+  margin-top: 120px;
+}  
+
+.meeting-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   ACTIVE CARD
+=========================== */
+
+.meeting-card-active {
+  background: #1789FC;
+  border: none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.meeting-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  flex: 1;
+  min-width: 0;
+}
+
+.meeting-avatar {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+}
+
+.meeting-text {
+  flex: 1;
+  min-width: 0;
+
+  /* Reserve space for the three-dot button */
+  max-width: calc(100% - 100px);
+}
+
+.meeting-description {
+  margin: 0;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.meeting-title {
+  margin: 8px 0 0;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* ===========================
+   COLORS
+=========================== */
+
+.meeting-card .meeting-description,
+.meeting-card .meeting-title,
+.meeting-card .detail-row span {
+  color: #111827;
+}
+
+.meeting-card-active .meeting-description,
+.meeting-card-active .meeting-title,
+.meeting-card-active .detail-row span {
+  color: #FFFFFF;
+}
+
+/* ===========================
+   MENU BUTTON
+=========================== */
+
+.meeting-menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+}
+
+.menu-button {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.menu-button img {
+  width: 22px;
+  height: 22px;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.meeting-divider {
+  margin: 3px 0 14px 56px;
+
+  height: 1px;
+  width: 2000px;
+
+  background: #D7E7FF;
+}
+
+.meeting-card-active .meeting-divider {
+  background: rgba(255,255,255,.35);
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+.meeting-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 10px;
+}
+
+/* ===========================
+   DETAILS
+=========================== */
+
+.meeting-details {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.detail-row img {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+}
+
+.detail-row span {
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+/* ===========================
+   CHART
+=========================== */
+
+.meeting-chart {
+  width: 60px;
+  height: 98px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 480px) {
+  .meeting-card {
+    width: 100%;
+  }
+
+  .meeting-title {
+    font-size: 17px;
+  }
+
+  .meeting-description {
+    font-size: 12px;
+  }
+
+  .meeting-chart {
+    width: 54px;
+    height: 88px;
+  }
+}

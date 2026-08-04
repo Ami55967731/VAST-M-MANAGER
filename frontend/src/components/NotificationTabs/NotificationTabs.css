@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+/* ===========================
+   TABS CONTAINER
+=========================== */
+
+.notification-tabs {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin: 10px auto 12px;
+
+  padding: 3px;
+
+  background: #F5F6F7;
+
+  border-radius: 999px;
+}
+
+/* ===========================
+   TAB
+=========================== */
+
+.notification-tab {
+  width: 64px;
+  height: 25px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+
+  color: #6B7280;
+
+  cursor: pointer;
+
+  transition: .25s ease;
+}
+
+/* ===========================
+   ACTIVE TAB
+=========================== */
+
+.notification-tab.active {
+  background: #1789FC;
+
+  color: #FFFFFF;
+
+  box-shadow: 0 2px 5px rgba(23, 137, 252, 0.2);
+}

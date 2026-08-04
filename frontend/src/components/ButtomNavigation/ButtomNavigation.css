@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap");
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 1280px;
+  border-top: 1px solid #e0e0e0;
+
+  height: 92px;
+
+  background: #ffffff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  padding-top: 14px;
+  padding-bottom: 18px;
+
+  box-sizing: border-box;
+
+  z-index: 999;
+}
+
+.Navigation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: #8A8A8A;
+
+  font-family: "Urbanist", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  gap: 8px;
+}
+
+.Navigation-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.Navigation-item span {
+  white-space: nowrap;
+}
+
+.Navigation-item.active {
+  color: #1E63F3;
+}
+
+.Navigation-item.active img {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(2383%)
+    hue-rotate(210deg) brightness(98%) contrast(94%);
+}

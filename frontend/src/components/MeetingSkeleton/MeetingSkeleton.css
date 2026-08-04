@@ -1,0 +1,46 @@
+.meeting-skeleton-list {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meeting-skeleton-card {
+  background: #eef5ff;
+  border-radius: 16px;
+  padding: 18px;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.line {
+  height: 10px;
+  background: #ffffff;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.large {
+  width: 90%;
+}
+
+.medium {
+  width: 75%;
+}
+
+.small {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}

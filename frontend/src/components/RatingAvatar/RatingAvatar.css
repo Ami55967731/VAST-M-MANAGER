@@ -1,0 +1,68 @@
+.rating-avatars {
+  position: relative;
+
+  width: 210px;
+  height: 190px;
+
+  margin: 34px auto 40px;
+}
+
+.rating-avatar {
+  position: absolute;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+/* Top */
+
+.avatar-large {
+  width: 72px;
+  height: 72px;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* Left */
+
+.avatar-left {
+  width: 54px;
+  height: 54px;
+
+  top: 72px;
+  left: 0;
+}
+
+/* Right */
+
+.avatar-right {
+  width: 54px;
+  height: 54px;
+
+  top: 72px;
+  right: 0;
+}
+
+/* Bottom Left */
+
+.avatar-bottom-left {
+  width: 42px;
+  height: 42px;
+
+  bottom: 0;
+  left: 30px;
+}
+
+/* Bottom Right */
+
+.avatar-bottom-right {
+  width: 42px;
+  height: 42px;
+
+  bottom: 0;
+  right: 30px;
+}

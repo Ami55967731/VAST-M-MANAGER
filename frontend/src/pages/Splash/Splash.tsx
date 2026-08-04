@@ -1,55 +1,107 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence, } from "framer-motion";
 
-import VLogo from "../../assets/images/V.svg";
-import VMMLogo from "../../assets/images/VMM.svg";
+import V from "../../assets/images/V.svg";
+import VM from "../../assets/images/VM.svg";
+import VMM from "../../assets/images/VMM.svg";
 
-function Splash() {
+type LogoStage = 0 | 1 | 2;
+
+export default function Splash() {
   const navigate = useNavigate();
 
-  const [showFullLogo, setShowFullLogo] = useState(false);
+  const [stage, setStage] = useState<LogoStage>(0);
+  const [showText, setShowText] = useState(false);
 
   useEffect(() => {
-    const logoTimer = setTimeout(() => {
-      setShowFullLogo(true);
-    }, 1500);
-
-    const pageTimer = setTimeout(() => {
-      navigate("/onboarding");
-    }, 3500);
+    const timers = [
+      setTimeout(() => setStage(1), 500),
+      setTimeout(() => setStage(2), 1500),
+      setTimeout(() => setShowText(true), 2600),
+      setTimeout(() => {
+        navigate("/onboarding");
+      }, 7000),
+    ];
 
     return () => {
-      clearTimeout(logoTimer);
-      clearTimeout(pageTimer);
+      timers.forEach(clearTimeout);
     };
   }, [navigate]);
 
+  const logos = [V, VM, VMM];
+
   return (
-    <div className="w-full h-full bg-white flex items-center justify-center">
-
-      {!showFullLogo ? (
-        <img
-          src={VLogo}
-          alt="V Logo"
-          className="animate-scaleFade"
-          style={{ width: 32, height: 'auto' }}
-        />
-      ) : (
-        <div className="flex flex-col items-center animate-fadeIn">
-          <img
-            src={VMMLogo}
-            alt="VMM Logo"
-            style={{ width: 146, height: 72 }}
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#FFFFFF",
+         transform:" translateY(-200px)",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={stage}
+            src={logos[stage]}
+            alt="Vast Meeting Manager Logo"
+            initial={{
+              opacity: 0,
+              x: 45,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            exit={{
+              opacity: 0,
+              x: -15,
+            }}
+            transition={{
+              duration: 0.45,
+              ease: [0.4, 0, 0.2, 1],
+            }}
           />
+        </AnimatePresence>
 
-          <p className="mt-3 text-[#1789FC] heading-2">
-            Vast Meeting Manager
-          </p>
-        </div>
-      )}
-
+        <AnimatePresence>
+          {showText && (
+            <motion.p
+              initial={{
+                opacity: 0,
+                x: 30,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.4, 0, 0.2, 1],
+              }}
+              style={{
+                marginTop: 20,
+                fontSize: 20,
+                fontFamily: "Urbanist, sans-serif",
+                fontWeight: 600,
+                color: "#1789FC",
+              }}
+            >
+              Vast Meeting Manager
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
-
-export default Splash;

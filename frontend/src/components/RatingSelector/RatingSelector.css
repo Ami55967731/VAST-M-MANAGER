@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+.rating-selector {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.rating-title {
+  font-family: "Urbanist", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 28px;
+}
+
+.rating-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rating-card {
+  width: 58px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.rating-card:hover {
+  transform: translateY(-2px);
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  margin-bottom: 8px;
+}
+
+.star-row {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.rating-icon {
+  font-size: 23px;
+  color: #B2D8FE;
+  transition: color 0.25s ease;
+}
+
+.rating-card.selected .rating-icon {
+  color: #1789FC;
+}
+
+.rating-label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  text-align: center;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.rating-2,
+.rating-1 {
+  margin-top: 22px;
+}

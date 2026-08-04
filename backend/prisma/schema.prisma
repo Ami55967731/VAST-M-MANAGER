@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(uuid(4))
+  firstName String
+  lastName  String
+  password  String
+  email     String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  avatar    String
+  Meeting   Meeting[]
+  otpCodes  OtpCode[]
+}
+
+model RefreshToken {
+  token      String   @unique
+  userId     String   @unique
+  expiryDate DateTime
+  createdAt  DateTime @default(now())
+}
+
+model ResetToken {
+  token      String   @unique
+  userId     String   @unique
+  expiryDate DateTime
+  createdAt  DateTime @default(now())
+}
+
+model OtpCode {
+  id         String   @id @default(cuid())
+  code       String
+  expiryDate DateTime
+  verified   Boolean  @default(false)
+  userId     String
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Meeting {
+  id          String    @id @default(uuid(4))
+  title       String
+  description String?
+  timezone    String
+  status      Status    @default(UPCOMING)
+  isRecurring Boolean   @default(false)
+  location    String?
+  date        DateTime
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  userId      String
+  endTime     DateTime?
+  startTime   DateTime
+  user        User      @relation(fields: [userId], references: [id])
+}
+
+enum Status {
+  UPCOMING
+  TODAY
+  COMPLETED
+  CANCELLED
+}
