@@ -42,4 +42,4 @@ Vast-Manager/
 
 ## Acknowledgements
 
-The backend was originally created by the isaac omololu and is included here with their permission.
+The backend for this project was originally created by the **Isaac Omololu** and is included here with his permission.
